@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+/* styles.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 800px;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+button {
+  padding: 10px;
+  margin: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  width: 20vh; /* Full width on small screens */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.table-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.pagination-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Allow pagination to wrap on small screens */
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.pagination-button {
+  padding: 8px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin: 5px; /* Add some spacing between pagination buttons */
+  min-width: 40px; /* Set a minimum width for pagination buttons */
+}
+
+.pagination-button:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
+.upload{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  align-items: center;
 
-.App-link {
-  color: #61dafb;
 }
+@media only screen and (max-width: 600px) {
+  .pagination-container {
+    flex-direction: column; /* Stack pagination buttons vertically on small screens */
+    align-items: center;
+  }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .input-container {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  button {
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 10px; /* Add some spacing between the file input and button */
   }
+}
+.extra{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
